@@ -11,19 +11,24 @@
     <![endif]-->
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to('Affektive Software', '#', id: 'logo')%>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    '/static_pages/home' %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Contact",    '#' %></li>
-              <li><%= link_to "About Us", '/static_pages/about' %></li>
-            </ul>
-          </nav>
+    <header class="navbar navbar-inverse navbar-static-top" role"banner">
+      <div class="custom_navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Affektive Software</a>
         </div>
+        <nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",    '/static_pages/home' %></li>
+            <li><%= mail_to('contact@affektive.com', "Contact Us") %></li>
+            <li><%= link_to "About Us", '/static_pages/about' %></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="container">
